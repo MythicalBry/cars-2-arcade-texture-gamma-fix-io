@@ -1,7 +1,10 @@
-import struct, os
+import struct
+import os
+import sys
+from pathlib import Path
 
 # Change this path to your target directory
-target_dir = "./dds-textures/"
+target_dir = Path(sys.argv[1])
 
 for name in os.listdir(target_dir):
     if name.lower().endswith(".dds"):
